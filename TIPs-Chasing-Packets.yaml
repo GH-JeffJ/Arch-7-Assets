@@ -327,10 +327,13 @@ Resources:
             InstanceType: "t2.micro"
             AvailabilityZone: !GetAtt EC2Subnet.AvailabilityZone
             Tenancy: "default"
-            SubnetId: !Ref EC2Subnet8
             EbsOptimized: false
-            SecurityGroupIds: 
-              - !Ref EC2SecurityGroup6
+            NetworkInterfaces: 
+            -   AssociatePublicIpAddress: "true"
+                DeviceIndex: "0"
+                GroupSet: 
+                - !Ref EC2SecurityGroup6
+                SubnetId: !Ref EC2Subnet8
             SourceDestCheck: true
             BlockDeviceMappings: 
               - 
