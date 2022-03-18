@@ -3,25 +3,28 @@ Description: "Chasing packets TIPs session environment template."
 
 Outputs:
     Demo1SourceInstance:
-        Description: IP Address for the Demo1 Source Instance
+        Description: Private IP Address for the Demo1 Source Instance
         Value: !GetAtt EC2Instance2.PrivateIp
     Demo1TargetInstance:
-        Description: IP Address for the Demo1 Target Instance
+        Description: Private IP Address for the Demo1 Target Instance
         Value: !GetAtt EC2Instance.PrivateIp
     Demo2SourceInstance:
-        Description: IP Address for the Demo2 Source Instance
+        Description: Private IP Address for the Demo2 Source Instance
         Value: !GetAtt EC2Instance4.PrivateIp
     Demo2TargetInstance:
-        Description: IP Address for the Demo2 Target Instance
+        Description: Private IP Address for the Demo2 Target Instance
         Value: !GetAtt EC2Instance5.PrivateIp
     Demo3SourceInstance:
-        Description: IP Address for the Demo3 Source Instance
+        Description: Private IP Address for the Demo3 Source Instance
         Value: !GetAtt EC2Instance6.PrivateIp
     Demo3TargetInstance:
-        Description: IP Address for the Demo3 Target Instance
+        Description: Private IP Address for the Demo3 Target Instance
         Value: !GetAtt EC2Instance3.PrivateIp
+    Demo3TargetInstancePublic:
+        Description: Public IP Address for the Demo3 Target Instance
+        Value: !GetAtt EC2Instance3.PublicIp
     Demo4SourceInstance:
-        Description: IP Address for the Demo4 Source Instance
+        Description: Private IP Address for the Demo4 Source Instance
         Value: !GetAtt EC2Instance7.PrivateIp
 Resources:
 #IAM Role - 1 total          
